@@ -14,7 +14,7 @@ headers = {
 
 try:
     print(f"Searching for {display_name}...")
-    response = requests.get(poke_url, timeout= 10)
+    response = requests.get(poke_url, headers=headers, timeout=10)
     if response.status_code ==  200:
 
         request = response.json()
@@ -54,6 +54,7 @@ try:
 
 except Exception as e :
     print(f"ERROR : {e}")
+
 
 
 
